@@ -1,0 +1,7 @@
+<select class="custom-select">
+    <option selected>Choose your modules</option>
+    
+    {% for module in modules %}
+        <option value="{{module.pk}}">{{ module.name }}</option>
+    {% endfor %}
+</select>

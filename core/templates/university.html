@@ -1,5 +1,20 @@
 {% extends 'base.html' %} 
 
 {% block content %}
-    Content
+<select class="custom-select mb-4"
+        name="course"
+        hx-get="{% url 'modules' %}" 
+        hx-trigger="change" 
+        hx-target="#modules">
+
+    <option selected>Open this select menu</option>
+    {% for course in courses %}
+        <option value="{{course.pk}}">{{ course.name }}</option>
+    {% endfor %}
+</select>
+
+<div id="modules">
+    {% include 'partials/modules.html' %} 
+</div>
+
 {% endblock %}
