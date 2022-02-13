@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h1>University of Glasgow</h1>
+
+<p>
+    {% lorem 2 %}
+</p>
+
+<button class="btn btn-primary"
+    hx-get="{% url 'course-list' %}"
+    hx-target="this"
+    hx-swap="outerHTML">View Courses</button>
+
+{% endblock %}
