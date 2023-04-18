@@ -7,7 +7,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         Module.objects.all().delete()
         course_names = [
-            'Computer Science', 'Mathematics', 'Physics', 'Film Studies'
+            'Computer Science', 'Mathematics', 'Physics', 'History'
         ]
 
         if not Course.objects.count():
